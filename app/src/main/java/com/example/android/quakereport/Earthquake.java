@@ -19,16 +19,21 @@ public class Earthquake {
     // time in milliseconds from 1970
     private long mTime;
 
+    // url for the details of the earthquake
+    private String mUrl;
+
     /**
      * Constructor
      * @param magnitude magnitude of the earthquake
      * @param place place where earthquake occurred
      * @param time time in seconds from 1970
+     * @param url for the details of the earthquake
      */
-    public Earthquake (float magnitude, String place, long time) {
+    public Earthquake (float magnitude, String place, long time, String url) {
         mMagnitude = magnitude;
         mPlace = place;
         mTime = time;
+        mUrl = url;
     }
 
     /**
@@ -45,6 +50,14 @@ public class Earthquake {
      */
     public String getmPlace () {
         return mPlace;
+    }
+
+    /**
+     *
+     * @return String mUrl
+     */
+    public String getmUrl () {
+        return mUrl;
     }
 
     /**

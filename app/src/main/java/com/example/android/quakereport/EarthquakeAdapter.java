@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.support.v4.content.ContextCompat;
 import java.util.ArrayList;
+import java.util.List;
+
 import android.graphics.drawable.GradientDrawable;
 
 /**
@@ -69,10 +71,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         TextView timeHM = (TextView) listItemView.findViewById(R.id.time);
         // Get the String value for time
         timeHM.setText(currentEarthquake.getTime(currentEarthquake.getmTimeMill()));
-
-
         return listItemView;
-
     }
 
     private int getMagnitudeColor (float magn) {
@@ -112,6 +111,5 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
                 break;
         }
             return ContextCompat.getColor(getContext(), magnitudeColorResourceId);
-
     }
 }
